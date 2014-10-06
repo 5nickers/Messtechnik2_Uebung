@@ -1,0 +1,67 @@
+\input{header.tex}
+
+
+\begin{document}
+
+\maketitle
+
+Dieser Text ist unter dieser \href{http://creativecommons.org/licenses/by-nc-sa/4.0/}{Creative Commons} Lizenz veröffentlicht.
+
+\textcolor{red}{Ich erhebe keinen Anspruch auf Vollständigkeit oder Richtigkeit. Falls ihr Fehler findet oder etwas fehlt, dann meldet euch bitte über den Emailkontakt.}
+
+\tableofcontents
+
+
+\newpage
+
+\section{Aufgabe 2.1}
+
+\subsection*{a)}
+
+\begin{align*}
+	&\text{linearer Mittelwert:} \qquad \bar{u} = \frac{1}{T} \int u \d t = \unit[0]{V} \\
+	&\text{Gleichricht Mittelwert:} \qquad \bar{|u|} = \frac{1}{T} \int |u| \d t = \unit[1]{V} \\
+	&\text{effektiver Mittelwert:} \qquad u_{eff} = U = \sqrt{\frac{1}{T} \cdot \int u^2 \d t} = \left(\frac{1}{T} \cdot \left( 1^2 \cdot V^2 \cdot \frac{T}{2} + \left(- \unit[1]{V} \right)^2 \cdot \frac{T}{2} \right) \right)^{0,5} = \unit[1]{V} \\
+	\hfill \\
+	&\text{Formfaktor:} \qquad F = \frac{U}{|u|} = \frac{\unit{1}[V]}{\unit{1}[V]} = \unit{1}[V]
+\end{align*}
+
+\subsection*{b)}
+
+\begin{align*}
+	&\text{linearer Mittelwert:} \qquad \bar{u} = \frac{1}{T} \int u \d t = \frac{1}{T} \left(2 \cdot \frac{T}{T} - 1 \cdot \frac{T}{T} \right) = \unit[0,5]{V} \\
+	&\text{Gleichricht Mittelwert:} \qquad \bar{|u|} = \frac{1,5}{T} \int |u| \d t = = \frac{1}{T} \left(2 \cdot \frac{T}{T} + 1 \cdot \frac{T}{T} \right) \unit[1]{V} \\
+	&\text{effektiver Mittelwert:} \qquad u_{eff} = U = \sqrt{\frac{1}{T} \cdot \int u^2 \d t} = \left(\frac{1}{T} \left(2^2 \cdot \frac{T}{T} + 1^2 \cdot \frac{T}{T} \right) \right)^{0,5} = \unit[1,58]{V} \\
+	\hfill \\
+	&\text{Formfaktor:} \qquad F = \frac{U}{|u|} = \frac{\unit{1,58}[V]}{\unit{1,5}[V]} = \unit{1,05333}[V]
+\end{align*}
+
+
+\subsection*{c)}
+
+Wir betrachten den Sinus hier als Sinus von x statt von t, da wir dann nicht substituieren müssen.
+
+\begin{align*}
+	&\text{linearer Mittelwert:} \qquad \bar{u} = \frac{1}{2 \pi} \int_0^\pi \overset{\wedge}{u} \sin(x) \d x = \overset{\wedge}{u} \cdot \frac{1}{2 \pi} \left[ - \cos(x) \right]_0^\pi = \unit[3,18]{V} \\
+	&\text{Gleichricht Mittelwert: Das Signal ist schon gleichgerichtet, deshalb gilt $\bar{u} = |\bar{u}|$}  \\
+	&\text{effektiver Mittelwert:} \qquad u_{eff} = U = \sqrt{ \frac{1}{2 \pi} \int_0^\pi \overset{\wedge}{u}^2\sin(x)^2 \d x} = \overset{\wedge}{u} \sqrt{\left[ \frac{1}{2 \pi} \cdot \frac{x - cos(x) \cdot \sin(x)}{2}\right]_0^\pi} = \unit[5]{V} \\
+	\hfill \\
+	&\text{Formfaktor:} \qquad F = \frac{U}{|u|} = \frac{\unit{5}[V]}{\unit{3,18}[V]} = \unit{1,57}[V]
+\end{align*}
+
+
+\newpage
+
+\subsection*{d)}
+
+Wir müssen in diesem Fall nur bis $\frac{\pi}{2}$ betrachten, weil es sich ab dann schon wiederholt:
+
+\begin{align*}
+	&\text{linearer Mittelwert:} \qquad \bar{u} = \frac{2}{\pi} \int_0^\pi \overset{\wedge}{u} \sin(x) \d x = \overset{\wedge}{u} \cdot \frac{2}{\pi} \left[ - \cos(x) \right]_0^\pi = \unit[6,37]{V} \\
+	&\text{Gleichricht Mittelwert: Das Signal ist schon gleichgerichtet, deshalb gilt $\bar{u} = |\bar{u}|$}  \\
+	&\text{effektiver Mittelwert:} \qquad u_{eff} = U = \sqrt{ \frac{2}{\pi} \int_0^\pi \overset{\wedge}{u}^2\sin(x)^2 \d x} = \overset{\wedge}{u} \sqrt{\left[ \frac{2}{\pi} \cdot \frac{x - cos(x) \cdot \sin(x)}{2}\right]_0^\pi} = \unit[7,07]{V} \\
+	\hfill \\
+	&\text{Formfaktor:} \qquad F = \frac{U}{|u|} = \frac{\unit{7,07}[V]}{\unit{6,37}[V]} = \unit{1,11}[V]
+\end{align*}
+
+\end{document}
