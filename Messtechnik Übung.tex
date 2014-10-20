@@ -64,4 +64,93 @@ Wir müssen in diesem Fall nur bis $\frac{\pi}{2}$ betrachten, weil es sich ab d
 	&\text{Formfaktor:} \qquad F = \frac{U}{|u|} = \frac{\unit{7,07}[V]}{\unit{6,37}[V]} = \unit{1,11}[V]
 \end{align*}
 
+
+\section{Aufgabe 3.1}
+
+
+\subsection*{a)}
+
+Der Strom durch den Shuntwiderstand $R_S$ heißt $I_S$:
+
+\begin{align*}
+R_S &= 90 + 9 + 0,9 + 0,1 = \unit[100]{\Omega} \\
+\frac{I_{max}}{I_S} &= \frac{100}{400} \\
+\Leftrightarrow I_{max} &= \frac{1}{4} \cdot I_S 
+\intertext{Wir wissen das gilt:}
+I_{ges} = I_{max} + I_S &= \unit[1]{mA} \Leftrightarrow I_S = \unit[0,8]{mA} \Rightarrow I_{max} = \unit[0,2]{mA}
+\end{align*}
+
+
+
+\subsection*{b)}
+
+\begin{align*}
+\frac{I_{max}}{I_S} &= \frac{0,1}{400 + 99,9} \approx \frac{0,1}{500} \\
+\Leftrightarrow I_{max} &= \frac{0,1}{500} \cdot I_S = \frac{I_{ges}}{5000} = \unit[0,2]{mA}
+\end{align*}
+
+
+\subsection*{c)}
+
+Bild einfügen!!!
+
+\begin{align*}
+R_{ges} &= 920 + \frac{400 \cdot 100}{400 + 100} = \unit[1000]{\Omega}
+\end{align*}
+
+
+Von dem $\unit[920]{\Omega}$ fließen also \unit[1]{mA} nach links splittet sich dann wie im Aufgabenteil zuvor auf und wir erhalten dann wieder ein $I_{max} = \unit[0,2]{mA}$.
+
+Bei einem $R_{ges} = \unit[100]{k \Omega}$ und $\unit[100]{V}$ haben wir genau die selbe Situation nur andere Werte.
+
+
+\subsection*{d)}
+
+Die Innenwiderstände sind wie folgt:
+
+\begin{tabular}{|l|l|}
+	\hline $\unit[100]{V}$ Messbereich & $\unit[100]{k\Omega}$  \\ 
+	\hline $\unit[1]{V}$ Messbereich & $\unit[1]{k\Omega}$ \\ 
+	\hline $\unit[1]{mA}$ Messbereich & $\unit[80]{\Omega}$ \\ 
+	\hline $\unit[1]{A}$ Messbereich & $\unit[0,1]{\Omega}$ \\ 
+	\hline 
+\end{tabular} 
+
+\section{Aufgabe 3.2}
+
+Diese Aufgabe wurde nicht gemacht weil sie veraltet ist.
+
+
+\section{Aufgabe 3.3}
+
+Bild einfügen!!!!
+
+
+
+\begin{align*}
+U &= \left( R_V + R_U \right) \cdot I_{U,max} \\
+\Leftrightarrow R_V &= \frac{U - R_U \cdot I_{u,max}}{I_{u,max}} = \frac{U}{I_{u,max}} \cdot R_U = \frac{100}{0,1} \cdot 400 = \unit[1]{M \Omega}
+\intertext{Nun bestimmen wir noch den Shuntwiderstand:}
+\frac{I_S}{I_{I,max}} &= \frac{R_I}{R_S} \Leftrightarrow I_S = \frac{R_I}{R_S} \cdot I_{I,max} \\
+I &= I_S + I_{I,max} = I_{I,max} \cdot \left( \frac{R_I}{R_S} + 1 \right) \\
+R_S = R_I \cdot \frac{I_{I,max}}{I - I_{I,max}} &= \frac{\unit[10]{mA}}{\unit[10]{A} - \unit[10]{mA}} \cdot \unit[10]{\Omega} = \unit[0,01]{\Omega}
+\end{align*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \end{document}
