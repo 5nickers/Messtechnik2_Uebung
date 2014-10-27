@@ -151,6 +151,60 @@ R_S = R_I \cdot \frac{I_{I,max}}{I - I_{I,max}} &= \frac{\unit[10]{mA}}{\unit[10
 
 
 
+\section{Aufgabe 4.1}
+
+
+\subsection*{a)}
+
+Wir berechnen zunächst den Widerstand $R_A$ bei der Strommessung:
+
+\begin{align*}
+R_A &= \frac{\unit[200]{mV}}{\unit[20]{A}} = \unit[0,01]{\Omega}
+\intertext{Zur Abschätzung des Innenwiderstands $R_Q$ tun wir so als wäre die Messung korrekt:}
+R_Q = \frac{U_V}{I_A} &= \frac{1,2}{13,33} = \unit[0,09]{\Omega}
+\intertext{Der Widerstand ist also um etliche Größenordnungen kleiner als $R_V$ und daher können wir die Spannungsmessung als genau annehmen $U_0 = U_V$. Nun bestimmen wir den Widerstand bei der Strommessung:}
+I_A &= \frac{U_0}{R_Q + R_A} \\
+\Leftrightarrow U_0 &= I_A \cdot R_Q + I_A \cdot R_A \\
+\Leftrightarrow R_Q = \frac{U_0 - I_A \cdot R_A}{I_A} &= \frac{1,2 - 13,33 \cdot 0,01}{13,33} = \unit[0,08]{\Omega}
+\end{align*}
+
+\subsection*{b)}
+
+Es macht keinen Sinn bei der Spannung einen Fehler zu berechnen, weil der Fehler auf Grund des großen Widerstandes weit kleiner ist als das Messgerät anzeigen kann.
+
+Für den Strom können wir den Fehler so berechnen:
+
+\begin{align*}
+I_K &= \frac{U_0}{R_Q} = \frac{1,2}{0,08} = \unit[15]{\Omega} \\
+e &= I_A - I_K = \unit[- 1,67]{A} \\
+e^* &= \frac{e}{I_K} = \frac{-1.67}{15} = -0,111 = \unit[-11,1]{\%}
+\end{align*}
+
+
+\section{Aufgabe 4.2}
+
+Der Widerstand $R_h$ ist ein \textbf{einstellbarer} Widerstand, da mit diesem Widerstand kompensiert werden soll. Wir bestimmen zunächst de minimalen und den maximalen Strom:
+
+\begin{align*}
+I_{K,max} &= \frac{\unit[5]{V}}{\unit[50]{\Omega}} = \unit[0,1]{A} \\
+I_{K,min} &= \frac{\unit[5]{V}}{\unit[200]{\Omega}} = \unit[0,025]{A}
+\intertext{Die zugehörigen minimalen und maximalen Widerstände sind dann:}
+R_{h,max} &= \frac{\unit[10]{V}}{\unit[0,025]{A}} = \unit[400]{\Omega} \\
+R_{h,min} &= \frac{\unit[10]{V}}{\unit[0,1]{A}} = \unit[100]{\Omega}
+\intertext{Die Genauigkeit muss sich als an dem kleineren Widerstand orientieren:}
+\Delta R_{h,min} &= 100 \cdot 0,001 = \unit[0,1]{\Omega}
+\intertext{Jetzt stellt sich die Frage wie sich die Spannung an dem Widerstand $R_S$ ändert, wenn wir den Wert von $R_h$ um eine Einheit aus der Kompensationsstellung verstellen:}
+U_M &= (I - I_h) \cdot R_S = I \cdot R_S - \frac{U_h}{R_h} \cdot R_S
+\intertext{Dazu müssen wir die obige Formel ableiten:}
+\frac{\p U_M}{\p R_h} &= \frac{U_h}{R_h^2} \cdot R_S \\
+\Rightarrow \Delta U_M &= \frac{U_h \cdot R_S}{R_h^2} \cdot \Delta R_h = \frac{\unit[10]{V} \cdot \unit[10^3]{\Omega}}{\left( \unit[100]{\Omega} \right)^2} \cdot \unit[0,1]{\Omega} = \unit[0,1]{V}
+\end{align*}
+
+
+
+
+
+
 
 
 
