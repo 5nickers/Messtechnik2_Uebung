@@ -201,17 +201,54 @@ U_M &= (I - I_h) \cdot R_S = I \cdot R_S - \frac{U_h}{R_h} \cdot R_S
 \end{align*}
 
 
+\section{Aufgabe 4.3}
+
+Diese Aufgabe ist nicht klausurrelevant und wurde noch nicht in der Übung besprochen.
 
 
+\section{Aufgabe 4.4}
 
 
+Bild einfügen!!!
+
+\subsection*{a)}
+
+Wir wollen die Empfindlichkeit der Messbrücke bestimmen. Die Empfindlichkeit hängt dabei folgendermaßen von der Spannungsänderung und der Dehnung ab:
+
+\begin{align*}
+E &= \frac{\Delta U_M}{\Delta \epsilon} = ?
+\intertext{Zunächst drücken wir die Spannung $U_0$ mit den zwei möglichen Ästen ab:}
+U_0 &= R_1 \cdot I_1 + R \cdot I_1 = 2 R T_1 \\
+U_0 &= \left( R + \Delta R \right) \cdot I_2 + \left( R - \Delta R \right) \cdot I_2 = 2 R I_2 
+\intertext{Nun könen wir nach dem Strom lösen:}
+I = I_1 = I_2 &= \frac{U_0}{2 R} \\
+\intertext{Wir betrachten den Maschenumlauf I:}
+U_M &= I \cdot \left( R- \Delta R \right) - I \cdot R = 0 \\
+\Leftrightarrow U_M &= I \cdot \Delta R = \frac{U_0}{2} \cdot \frac{\Delta R}{R}
+\intertext{Das Verhältnis $\frac{\Delta R}{R}$ hängt direkt mit dem k-Faktor und der Dehnung zusammen:}
+\frac{\Delta R}{R} &= k \cdot \epsilon \Rightarrow U_M = \frac{U_0}{2} \cdot k \cdot \epsilon 
+\intertext{Die Empfindlichkeit ist die Ableitung dieser Gleichung nach der Dehnung:}
+E &= \frac{\p U_M}{\p \epsilon} = \frac{U_0}{2} \cdot k = \frac{20}{2} \cdot 2 = \unit[20]{V}
+\end{align*}
+
+\subsection*{b)}
+
+\begin{align*}
+U_M &= \frac{20}{2} \cdot 2 \cdot 2 \cdot 10^{-4} = \unit[4]{mV}
+\end{align*}
 
 
+\section{Aufgabe 4.5}
 
+Zunächst bestimmen wir die Impulsfrequenz:
 
+\begin{align*}
+f_s &= \frac{1000}{60} = \unit[16,7]{1/s}
+\intertext{Damit der Fehler unter $\unit[1]{\%}$ liegt müssen wir mehr als 100 Impulse messen:}
+T_{ref} &= \frac{100}{16,7} = \unit[5,98]{s}
+\end{align*}
 
-
-
+In der Praxis kann man sowas nicht verwenden, da die Totzeit viel zu groß ist.
 
 
 
