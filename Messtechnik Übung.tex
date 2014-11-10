@@ -253,6 +253,90 @@ T_{ref} &= \frac{100}{16,7} = \unit[5,98]{s}
 
 In der Praxis kann man sowas nicht verwenden, da die Totzeit viel zu groß ist.
 
+\newpage
+
+\section{Aufgabe 5.1}
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.1]{A5_1_1.jpg}
+\end{figure}
+
+
+\subsection*{a)}
+
+Wir machen zwei Umläufe, einmal im linken Aste und einmal über den Transistor im rechten:
+
+\begin{align*}
+\text{I:} \qquad 0 &= I_1 \cdot R_1 + U_{ein} - U_1  \\
+\text{II:} \qquad 0 &= I_1 \cdot R_2 + U_2 - U_{ein} 
+\intertext{Für $U_{ein}$ gilt zudem:}
+U_2 &= - A \cdot U_{ein} \Leftrightarrow U_{ein} = - \frac{U_2}{A}
+\intertext{Das setzen wir ein:}
+\text{I:} \qquad 0 &= I_1 \cdot R_1 - \frac{U_2}{A} - U_1  \\
+\text{II:} \qquad 0 &= I_1 \cdot R_2 + U_2 + \frac{U_2}{A} \\
+\text{II:} \qquad I_1 &= - \frac{U_2}{R_2} \left( 1 + \frac{1}{A} \right)
+\intertext{Wir setzen in die erste Gleichung ein:}
+\text{I:} \qquad 0 &= U_2 \cdot \frac{R_1}{R_2} \left( 1 + \frac{1}{A} \right) - \frac{U_2}{A} - U_1 \\
+\Leftrightarrow - U_1 &= U_2 \cdot \left[ \frac{R_1}{R_2} \left( 1 + \frac{1}{A} \right) + \frac{1}{A}  \right]
+\intertext{Das Verhältnis ist dann:}
+V^* &= \frac{U_2}{U_1} = - \frac{1}{\frac{R_1}{R_2} \left( 1 + \frac{1}{A} \right) + \frac{1}{A}} = \frac{A \cdot R_2}{R_1 \cdot A + R_1 + R_2}
+\end{align*}
+
+\subsection*{b)}
+
+\begin{align*}
+e^* &= \frac{V - V^*}{V^*} = \frac{V}{V^*} - 1 \\
+&= \frac{R_2}{R_1} \cdot \frac{R_1 \cdot A + R_1 + R_2}{A \cdot R_2} - 1 = 1 + \frac{1}{A} + \frac{R_2}{R_1 \cdot A} - 1 = \frac{1}{A} + \frac{R_2}{R_1 \cdot A}
+\end{align*}
+
+\subsection*{c)}
+
+Wir nehmen die Gleichung aus Teil b):
+
+\begin{align*}
+e^* &= \underbrace{\frac{1}{10^5}}_{\approx 0} + \frac{R_2}{R_1 \cdot 10^5} \leq 0,01
+\end{align*} 
+
+Damit das stimmt darf $\frac{R_2}{R_1}$ nicht größer als $10^3$ sein.
+
+
+\section{Aufgabe 5.2}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.1]{A5_2_1.jpg}
+\end{figure}
+
+
+\subsection*{1)}
+
+Der Widerstand $R_1$ bildet hier den Eingangswiderstand der Schaltung. Wenn der Fehler dabei maximal $\unit[1]{\%}$ sein soll, dann brauchen wir ein $R_1 = \unit[1000]{\Omega}$.
+
+\subsection*{2)}
+
+Statt den $\unit[2]{V}$ aus der Aufgabenstellung rechnen wir mit den von Prof. Helsper genannten $\unit[200]{mV}$.
+
+\begin{align*}
+|V| &= \frac{R_2}{R_1} = \frac{200}{20,78} = 18,55
+\end{align*}
+
+Es gilt damit $R_2 = \unit[18,55]{k \Omega}$
+
+\subsection*{c)}
+
+Die Zeitkonstante $\tau$ des Tiefpasses soll nun $T = \unit[1]{s}$ sein. Das können wir so bestimmen:
+
+\begin{align*}
+T &= R_2 \cdot C_2 \\
+\Leftrightarrow C_2 &= \frac{T}{R_2} = \frac{1}{18550} = \unit[53,9]{\mu F}
+\end{align*}
+
+
+
+
+
 
 
 
