@@ -334,6 +334,61 @@ T &= R_2 \cdot C_2 \\
 \end{align*}
 
 
+\section{Aufgabe 5.3}
+
+
+\subsection*{a)}
+
+Eine Verstärkung von $\unit[40]{dB}$ ist $V = 10^{40/20} = 10^2 = 100$. Die Verstärkung wir über die beiden Widerstände geregelt:
+
+\begin{align*}
+V &= 1 + \frac{R_2}{R_1}
+\intertext{Es ist üblich den Widerstand $R_1$ genauso groß zu wählen wie den Innnenwiderstand der Spannungsquelle:}
+100 &= 1 + \frac{R_2}{100} \\
+\Leftrightarrow 99 &= \frac{R_2}{100} \\
+\Leftrightarrow R_2 &= \unit[990]{k \Omega}
+\end{align*}
+
+
+\subsection*{b)}
+
+
+Mit Gleichspannungsfehler ist hier die Wirkung der Offsetspannung gemeint. Wenn wir also eine Offsetspannung von $\unit[1]{mV}$ haben dann wird diese logischerweise mit der Verstärkung auf $\unit[100]{mV}$ verstärkt.
+
+
+\subsection*{c)}
+
+Wir berechnen zunächst die Grenzfrequenz, dabei wissen wir, das bei der Transitfrequenz die Verstärkung nur noch 1 ist.
+
+\begin{align*}
+f_g \cdot V &= f_T \cdot 1 \\
+\Leftrightarrow f_g &= \frac{f_T}{100} = \frac{\unit[5]{MHz}}{100} = \unit[50]{kHz}
+\intertext{Für den Fehler müssen wir uns erstmal klar machen was $\unit[-3]{dB}$ sind:}
+10^{-3/20} &= 0,71
+\intertext{Unsere Verstärkung ist also nur noch $V = V_0 \cdot 0,71$. Das können wir zur Fehlerberechnung nutzen:}
+e^* = \frac{V_0 - V}{V_0} &= \frac{V_0 \cdot (1 - 0,71)}{V_0} = 0,29 \approx \unit[30]{\%}
+\end{align*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
