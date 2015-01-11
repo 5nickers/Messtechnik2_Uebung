@@ -30,7 +30,7 @@ Dieser Text ist unter dieser \href{http://creativecommons.org/licenses/by-nc-sa/
 
 \begin{align*}
 	&\text{linearer Mittelwert:} \qquad \bar{u} = \frac{1}{T} \int u \d t = \frac{1}{T} \left(2 \cdot \frac{T}{T} - 1 \cdot \frac{T}{T} \right) = \unit[0,5]{V} \\
-	&\text{Gleichricht Mittelwert:} \qquad \bar{|u|} = \frac{1,5}{T} \int |u| \d t = = \frac{1}{T} \left(2 \cdot \frac{T}{T} + 1 \cdot \frac{T}{T} \right) \unit[1]{V} \\
+	&\text{Gleichricht Mittelwert:} \qquad \bar{|u|} = \frac{1,5}{T} \int |u| \d t = = \frac{1}{T} \left(2 \cdot \frac{T}{T} + 1 \cdot \frac{T}{T} \right) = \unit[1]{V} \\
 	&\text{effektiver Mittelwert:} \qquad u_{eff} = U = \sqrt{\frac{1}{T} \cdot \int u^2 \d t} = \left(\frac{1}{T} \left(2^2 \cdot \frac{T}{T} + 1^2 \cdot \frac{T}{T} \right) \right)^{0,5} = \unit[1,58]{V} \\
 	\hfill \\
 	&\text{Formfaktor:} \qquad F = \frac{U}{|u|} = \frac{\unit{1,58}[V]}{\unit{1,5}[V]} = \unit{1,05333}[V]
@@ -175,7 +175,7 @@ Es macht keinen Sinn bei der Spannung einen Fehler zu berechnen, weil der Fehler
 Für den Strom können wir den Fehler so berechnen:
 
 \begin{align*}
-I_K &= \frac{U_0}{R_Q} = \frac{1,2}{0,08} = \unit[15]{\Omega} \\
+I_K &= \frac{U_0}{R_Q} = \frac{1,2}{0,08} = \unit[15]{A} \\
 e &= I_A - I_K = \unit[- 1,67]{A} \\
 e^* &= \frac{e}{I_K} = \frac{-1.67}{15} = -0,111 = \unit[-11,1]{\%}
 \end{align*}
@@ -221,7 +221,7 @@ Wir wollen die Empfindlichkeit der Messbrücke bestimmen. Die Empfindlichkeit h�
 \begin{align*}
 E &= \frac{\Delta U_M}{\Delta \epsilon} = ?
 \intertext{Zunächst drücken wir die Spannung $U_0$ mit den zwei möglichen Ästen ab:}
-U_0 &= R_1 \cdot I_1 + R \cdot I_1 = 2 R T_1 \\
+U_0 &= R \cdot I_1 + R \cdot I_1 = 2 R I_1 \\
 U_0 &= \left( R + \Delta R \right) \cdot I_2 + \left( R - \Delta R \right) \cdot I_2 = 2 R I_2 
 \intertext{Nun könen wir nach dem Strom lösen:}
 I = I_1 = I_2 &= \frac{U_0}{2 R} \\
